@@ -79,17 +79,18 @@ function ItemsBoughtTable({
                       <td className="whitespace-nowrap px-6 py-4">
                         <button
                           className="border border-black bg-red-300  w-5 mr-2"
+                          onClick={() =>  addProduct(item.Product, item.Price)}
+                        >
+                          +
+                          </button>
+                        {item.Qty}
+                        <button
+                          className="border border-black bg-green-300 w-5 ml-2"
                           onClick={() => handleMinus(index)}
                         >
                           -
                         </button>
-                        {item.Qty}
-                        <button
-                          className="border border-black bg-green-300 w-5 ml-2"
-                          onClick={() => addProduct(item.Product, item.Price)}
-                        >
-                          +
-                        </button>
+                       
                       </td>
                       <td className="whitespace-nowrap px-6 py-4">
                         ₹ {item.Total}
