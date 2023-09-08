@@ -373,7 +373,7 @@ function Product() {
                   onChange={handleSearch}
                 ></input>
               </div>
-              <div className="scrollable-container h-screen overflow-y-auto">
+              <div className="scrollable-container max-h-[calc(100vh-6rem)] overflow-y-auto">
                 <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-4">
                   {filteredProducts.map((item, index) => {
                     return (
